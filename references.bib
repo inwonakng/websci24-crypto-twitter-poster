@@ -1,0 +1,521 @@
+@misc{wangDatasetDistillation2020,
+  title = {Dataset {{Distillation}}},
+  author = {Wang, Tongzhou and Zhu, Jun-Yan and Torralba, Antonio and Efros, Alexei A.},
+  year = {2020},
+  month = feb,
+  number = {arXiv:1811.10959},
+  eprint = {1811.10959},
+  primaryclass = {cs, stat},
+  publisher = {{arXiv}},
+  urldate = {2023-05-26},
+  abstract = {Model distillation aims to distill the knowledge of a complex model into a simpler one. In this paper, we consider an alternative formulation called dataset distillation: we keep the model fixed and instead attempt to distill the knowledge from a large training dataset into a small one. The idea is to synthesize a small number of data points that do not need to come from the correct data distribution, but will, when given to the learning algorithm as training data, approximate the model trained on the original data. For example, we show that it is possible to compress 60,000 MNIST training images into just 10 synthetic distilled images (one per class) and achieve close to original performance with only a few gradient descent steps, given a fixed network initialization. We evaluate our method in various initialization settings and with different learning objectives. Experiments on multiple datasets show the advantage of our approach compared to alternative methods.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+}
+
+@misc{wuOpenWorldFeatureExtrapolation2021,
+  title = {Towards {{Open-World Feature Extrapolation}}: {{An Inductive Graph Learning Approach}}},
+  shorttitle = {Towards {{Open-World Feature Extrapolation}}},
+  author = {Wu, Qitian and Yang, Chenxiao and Yan, Junchi},
+  year = {2021},
+  month = oct,
+  number = {arXiv:2110.04514},
+  eprint = {2110.04514},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.2110.04514},
+  urldate = {2023-04-24},
+  abstract = {We target open-world feature extrapolation problem where the feature space of input data goes through expansion and a model trained on partially observed features needs to handle new features in test data without further retraining. The problem is of much significance for dealing with features incrementally collected from different fields. To this end, we propose a new learning paradigm with graph representation and learning. Our framework contains two modules: 1) a backbone network (e.g., feedforward neural nets) as a lower model takes features as input and outputs predicted labels; 2) a graph neural network as an upper model learns to extrapolate embeddings for new features via message passing over a feature-data graph built from observed data. Based on our framework, we design two training strategies, a self-supervised approach and an inductive learning approach, to endow the model with extrapolation ability and alleviate feature-level over-fitting. We also provide theoretical analysis on the generalization error on test data with new features, which dissects the impact of training features and algorithms on generalization performance. Our experiments over several classification datasets and large-scale advertisement click prediction datasets demonstrate that our model can produce effective embeddings for unseen features and significantly outperforms baseline methods that adopt KNN and local aggregation.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Information Retrieval,Computer Science - Machine Learning},
+}
+
+@misc{medvedevNewPropertiesData2021a,
+      title={New Properties of the Data Distillation Method When Working With Tabular Data}, 
+      author={Dmitry Medvedev and Alexander D'yakonov},
+      year={2020},
+      eprint={2010.09839},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+@misc{nguyenDatasetMetaLearningKernel2021,
+  title = {Dataset {{Meta-Learning}} from {{Kernel Ridge-Regression}}},
+  author = {Nguyen, Timothy and Chen, Zhourong and Lee, Jaehoon},
+  year = {2021},
+  month = mar,
+  number = {arXiv:2011.00050},
+  eprint = {2011.00050},
+  primaryclass = {cs, stat},
+  publisher = {{arXiv}},
+  urldate = {2023-05-26},
+  abstract = {One of the most fundamental aspects of any machine learning algorithm is the training data used by the algorithm. We introduce the novel concept of \$\textbackslash epsilon\$-approximation of datasets, obtaining datasets which are much smaller than or are significant corruptions of the original training data while maintaining similar model performance. We introduce a meta-learning algorithm called Kernel Inducing Points (KIP) for obtaining such remarkable datasets, inspired by the recent developments in the correspondence between infinitely-wide neural networks and kernel ridge-regression (KRR). For KRR tasks, we demonstrate that KIP can compress datasets by one or two orders of magnitude, significantly improving previous dataset distillation and subset selection methods while obtaining state of the art results for MNIST and CIFAR-10 classification. Furthermore, our KIP-learned datasets are transferable to the training of finite-width neural networks even beyond the lazy-training regime, which leads to state of the art results for neural network dataset distillation with potential applications to privacy-preservation.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+}
+
+
+@misc{zhaoDatasetGradientMatching2021,
+	title = {Dataset {Condensation} with {Gradient} {Matching}},
+	url = {http://arxiv.org/abs/2006.05929},
+	abstract = {As the state-of-the-art machine learning methods in many fields rely on larger datasets, storing datasets and training models on them become significantly more expensive. This paper proposes a training set synthesis technique for data-efficient learning, called Dataset Condensation, that learns to condense large dataset into a small set of informative synthetic samples for training deep neural networks from scratch. We formulate this goal as a gradient matching problem between the gradients of deep neural network weights that are trained on the original and our synthetic data. We rigorously evaluate its performance in several computer vision benchmarks and demonstrate that it significantly outperforms the state-of-the-art methods. Finally we explore the use of our method in continual learning and neural architecture search and report promising gains when limited memory and computations are available.},
+	urldate = {2023-05-26},
+	publisher = {arXiv},
+	author = {Zhao, Bo and Mopuri, Konda Reddy and Bilen, Hakan},
+	month = mar,
+	year = {2021},
+	note = {arXiv:2006.05929 [cs]},
+	keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning},
+}
+
+
+@inproceedings{zhaoDatasetSiamese2021,
+	title = {Dataset {Condensation} with {Differentiable} {Siamese} {Augmentation}},
+	url = {https://proceedings.mlr.press/v139/zhao21a.html},
+	abstract = {In many machine learning problems, large-scale datasets have become the de-facto standard to train state-of-the-art deep networks at the price of heavy computation load. In this paper, we focus on condensing large training sets into significantly smaller synthetic sets which can be used to train deep neural networks from scratch with minimum drop in performance. Inspired from the recent training set synthesis methods, we propose Differentiable Siamese Augmentation that enables effective use of data augmentation to synthesize more informative synthetic images and thus achieves better performance when training networks with augmentations. Experiments on multiple image classification benchmarks demonstrate that the proposed method obtains substantial gains over the state-of-the-art, 7\% improvements on CIFAR10 and CIFAR100 datasets. We show with only less than 1\% data that our method achieves 99.6\%, 94.9\%, 88.5\%, 71.5\% relative performance on MNIST, FashionMNIST, SVHN, CIFAR10 respectively. We also explore the use of our method in continual learning and neural architecture search, and show promising results.},
+	language = {en},
+	urldate = {2023-05-26},
+	booktitle = {Proceedings of the 38th {International} {Conference} on {Machine} {Learning}},
+	publisher = {PMLR},
+	author = {Zhao, Bo and Bilen, Hakan},
+	month = jul,
+	year = {2021},
+	note = {ISSN: 2640-3498},
+	pages = {12674--12685},
+}
+
+@inproceedings{satheSubspaceOutlier2016,
+	title = {Subspace {Outlier} {Detection} in {Linear} {Time} with {Randomized} {Hashing}},
+	doi = {10.1109/ICDM.2016.0057},
+	abstract = {Outlier detection algorithms are often computationally intensive because of their need to score each point in the data. Even simple distance-based algorithms have quadratic complexity. High-dimensional outlier detection algorithms such as subspace methods are often even more computationally intensive because of their need to explore different subspaces of the data. In this paper, we propose an exceedingly simple subspace outlier detection algorithm, which can be implemented in a few lines of code, and whose complexity is linear in the size of the data set and the space requirement is constant. We show that this outlier detection algorithm is much faster than both conventional and high-dimensional algorithms and also provides more accurate results. The approach uses randomized hashing to score data points and has a neat subspace interpretation. Furthermore, the approach can be easily generalized to data streams. We present experimental results showing the effectiveness of the approach over other state-of-the-art methods.},
+	booktitle = {2016 {IEEE} 16th {International} {Conference} on {Data} {Mining} ({ICDM})},
+	author = {Sathe, Saket and Aggarwal, Charu C.},
+	month = dec,
+	year = {2016},
+	note = {ISSN: 2374-8486},
+	keywords = {Robustness, Complexity theory, Data models, Detection algorithms, Detectors, Electronic mail, Training},
+	pages = {459--468},
+}
+
+@inproceedings{ke_deepgbm_2019,
+	address = {New York, NY, USA},
+	series = {{KDD} '19},
+	title = {{DeepGBM}: {A} {Deep} {Learning} {Framework} {Distilled} by {GBDT} for {Online} {Prediction} {Tasks}},
+	isbn = {978-1-4503-6201-6},
+	shorttitle = {{DeepGBM}},
+	url = {https://doi.org/10.1145/3292500.3330858},
+	doi = {10.1145/3292500.3330858},
+	abstract = {Online prediction has become one of the most essential tasks in many real-world applications. Two main characteristics of typical online prediction tasks include tabular input space and online data generation. Specifically, tabular input space indicates the existence of both sparse categorical features and dense numerical ones, while online data generation implies continuous task-generated data with potentially dynamic distribution. Consequently, effective learning with tabular input space as well as fast adaption to online data generation become two vital challenges for obtaining the online prediction model. Although Gradient Boosting Decision Tree (GBDT) and Neural Network (NN) have been widely used in practice, either of them yields their own weaknesses. Particularly, GBDT can hardly be adapted to dynamic online data generation, and it tends to be ineffective when facing sparse categorical features; NN, on the other hand, is quite difficult to achieve satisfactory performance when facing dense numerical features. In this paper, we propose a new learning framework, DeepGBM, which integrates the advantages of the both NN and GBDT by using two corresponding NN components: (1) CatNN, focusing on handling sparse categorical features. (2) GBDT2NN, focusing on dense numerical features with distilled knowledge from GBDT. Powered by these two components, DeepGBM can leverage both categorical and numerical features while retaining the ability of efficient online update. Comprehensive experiments on a variety of publicly available datasets have demonstrated that DeepGBM can outperform other well-recognized baselines in various online prediction tasks.},
+	urldate = {2023-02-23},
+	booktitle = {Proceedings of the 25th {ACM} {SIGKDD} {International} {Conference} on {Knowledge} {Discovery} \& {Data} {Mining}},
+	publisher = {Association for Computing Machinery},
+	author = {Ke, Guolin and Xu, Zhenhui and Zhang, Jia and Bian, Jiang and Liu, Tie-Yan},
+	month = jul,
+	year = {2019},
+	keywords = {gradient boosting decision tree, neural network},
+	pages = {384--394},
+}
+
+
+@inproceedings{cuiDCBENCHDatasetCondensation2022,
+  title = {{{DC-BENCH}}: {{Dataset Condensation Benchmark}}},
+  author = {Cui, Justin and Wang, Ruochen},
+  year = {2022},
+booktitle = {Advances in {Neural} {Information} {Processing} {Systems}},
+  abstract = {Dataset Condensation is a newly emerging technique aiming at learning a tiny dataset that captures the rich information encoded in the original dataset. As the size of datasets contemporary machine learning models rely on becomes increasingly large, condensation methods become a prominent direction for accelerating network training and reducing data storage. Despite numerous methods have been proposed in this rapidly growing field, evaluating and comparing different condensation methods is non-trivial and still remains an open issue. The quality of condensed dataset are often shadowed by many critical contributing factors to the end performance, such as data augmentation and model architectures. The lack of a systematic way to evaluate and compare condensation methods not only hinders our understanding of existing techniques, but also discourages practical usage of the synthesized datasets. This work provides the first large-scale standardized benchmark on Dataset Condensation. It consists of a suite of evaluations to comprehensively reflect the generability and effectiveness of condensation methods through the lens of their generated dataset. Leveraging this benchmark, we conduct a large-scale study of current condensation methods, and report many insightful findings that open up new possibilities for future development. The benchmark library, including evaluators, baseline methods, and generated datasets, is open-sourced1 to facilitate future research and application.},
+  langid = {english},
+}
+
+
+@article{killamsetty_automata_nodate,
+	title = {{AUTOMATA} : {Gradient} {Based} {Data} {Subset} {Selection} for {Compute}-{Efficient} {Hyper}-parameter {Tuning}},
+	abstract = {Deep neural networks have seen great success in recent years; however, training a deep model is often challenging as its performance heavily depends on the hyperparameters used. In addition, finding the optimal hyper-parameter configuration, even with state-of-the-art (SOTA) hyper-parameter optimization (HPO) algorithms, can be time-consuming, requiring multiple training runs over the entire dataset for different possible sets of hyper-parameters. Our central insight is that using an informative subset of the dataset for model training runs involved in hyperparameter optimization, allows us to find the optimal hyper-parameter configuration significantly faster. In this work, we propose AUTOMATA, a gradient-based subset selection framework for hyper-parameter tuning. We empirically evaluate the effectiveness of AUTOMATA in hyper-parameter tuning through several experiments on real-world datasets in the text, vision, and tabular domains. Our experiments show that using gradient-based data subsets for hyper-parameter tuning achieves significantly faster turnaround times and speedups of 3×-30× while achieving comparable performance to the hyper-parameters found using the entire dataset.},
+	language = {en},
+	author = {Killamsetty, Krishnateja and Abhishek, Guttu Sai and Ramakrishnan, Ganesh and Evfimievski, Alexandre V and Popa, Lucian and Iyer, Rishabh},
+}
+
+@inproceedings{cazenavetteDatasetDistillationMatching2022b,
+  title = {Dataset {{Distillation}} by {{Matching Training Trajectories}}},
+  booktitle = {2022 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and {{Pattern Recognition}} ({{CVPR}})},
+  author = {Cazenavette, George and Wang, Tongzhou and Torralba, Antonio and Efros, Alexei A. and Zhu, Jun-Yan},
+  year = {2022},
+  month = jun,
+  pages = {10708--10717},
+  issn = {2575-7075},
+  doi = {10.1109/CVPR52688.2022.01045},
+  urldate = {2023-12-20},
+  abstract = {Dataset distillation is the task of synthesizing a small dataset such that a model trained on the synthetic set will match the test accuracy of the model trained on the full dataset. In this paper, we propose a new formulation that optimizes our distilled data to guide networks to a similar state as those trained on real data across many training steps. Given a network, we train it for several iterations on our distilled data and optimize the distilled data with respect to the distance between the synthetically trained parameters and the parameters trained on real data. To efficiently obtain the initial and target network parameters for large-scale datasets, we pre-compute and store training trajectories of expert networks trained on the real dataset. Our method handily outperforms existing methods and also allows us to distill higher-resolution visual data.},
+}
+
+@inproceedings{zhao_dataset_2023,
+	title = {Dataset {Condensation} {With} {Distribution} {Matching}},
+	url = {https://openaccess.thecvf.com/content/WACV2023/html/Zhao_Dataset_Condensation_With_Distribution_Matching_WACV_2023_paper.html},
+	language = {en},
+	urldate = {2023-05-26},
+	author = {Zhao, Bo and Bilen, Hakan},
+	year = {2023},
+	pages = {6514--6523},
+	file = {Full Text PDF:/Users/inwon/Zotero/storage/AGPD9284/Zhao and Bilen - 2023 - Dataset Condensation With Distribution Matching.pdf:application/pdf},
+}
+
+@misc{nguyen_dataset_2021,
+	title = {Dataset {Meta}-{Learning} from {Kernel} {Ridge}-{Regression}},
+	url = {http://arxiv.org/abs/2011.00050},
+	abstract = {One of the most fundamental aspects of any machine learning algorithm is the training data used by the algorithm. We introduce the novel concept of \${\textbackslash}epsilon\$-approximation of datasets, obtaining datasets which are much smaller than or are significant corruptions of the original training data while maintaining similar model performance. We introduce a meta-learning algorithm called Kernel Inducing Points (KIP) for obtaining such remarkable datasets, inspired by the recent developments in the correspondence between infinitely-wide neural networks and kernel ridge-regression (KRR). For KRR tasks, we demonstrate that KIP can compress datasets by one or two orders of magnitude, significantly improving previous dataset distillation and subset selection methods while obtaining state of the art results for MNIST and CIFAR-10 classification. Furthermore, our KIP-learned datasets are transferable to the training of finite-width neural networks even beyond the lazy-training regime, which leads to state of the art results for neural network dataset distillation with potential applications to privacy-preservation.},
+	urldate = {2023-05-26},
+	publisher = {arXiv},
+	author = {Nguyen, Timothy and Chen, Zhourong and Lee, Jaehoon},
+	month = mar,
+	year = {2021},
+	note = {arXiv:2011.00050 [cs, stat]},
+	keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
+	annote = {Comment: Accepted to ICLR 2021. Open source implementation: https://colab.sandbox.google.com/github/google-research/google-research/blob/master/kip/KIP.ipynb},
+	file = {arXiv.org Snapshot:/Users/inwon/Zotero/storage/XHKR8AFB/2011.html:text/html;Full Text PDF:/Users/inwon/Zotero/storage/BW2JW3UT/Nguyen et al. - 2021 - Dataset Meta-Learning from Kernel Ridge-Regression.pdf:application/pdf},
+}
+
+@inproceedings{nguyen_dataset_2021-1,
+	title = {Dataset {Distillation} with {Infinitely} {Wide} {Convolutional} {Networks}},
+	volume = {34},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2021/hash/299a23a2291e2126b91d54f3601ec162-Abstract.html},
+	abstract = {The effectiveness of machine learning algorithms arises from being able to extract useful features from large amounts of data. As model and dataset sizes increase, dataset distillation methods that compress large datasets into significantly smaller yet highly performant ones will become valuable in terms of training efficiency and useful feature extraction. To that end, we apply a novel distributed kernel-based meta-learning framework to achieve state-of-the-art results for dataset distillation using infinitely wide convolutional neural networks. For instance, using only 10  datapoints (0.02\% of original dataset), we obtain over 65\% test accuracy on CIFAR-10 image classification task, a dramatic improvement over the previous best test accuracy of 40\%. Our state-of-the-art results extend across many other settings for MNIST, Fashion-MNIST, CIFAR-10, CIFAR-100, and SVHN. Furthermore, we perform some preliminary analyses of our distilled datasets to shed light on how they differ from naturally occurring data.},
+	urldate = {2023-05-26},
+	booktitle = {Advances in {Neural} {Information} {Processing} {Systems}},
+	publisher = {Curran Associates, Inc.},
+	author = {Nguyen, Timothy and Novak, Roman and Xiao, Lechao and Lee, Jaehoon},
+	year = {2021},
+	pages = {5186--5198},
+	file = {Full Text PDF:/Users/inwon/Zotero/storage/BVQN7QFJ/Nguyen et al. - 2021 - Dataset Distillation with Infinitely Wide Convolut.pdf:application/pdf},
+}
+
+@misc{wangCAFE2022,
+	title = {{CAFE}: {Learning} to {Condense} {Dataset} by {Aligning} {Features}},
+	shorttitle = {{CAFE}},
+	url = {http://arxiv.org/abs/2203.01531},
+	abstract = {Dataset condensation aims at reducing the network training effort through condensing a cumbersome training set into a compact synthetic one. State-of-the-art approaches largely rely on learning the synthetic data by matching the gradients between the real and synthetic data batches. Despite the intuitive motivation and promising results, such gradient-based methods, by nature, easily overfit to a biased set of samples that produce dominant gradients, and thus lack global supervision of data distribution. In this paper, we propose a novel scheme to Condense dataset by Aligning FEatures (CAFE), which explicitly attempts to preserve the real-feature distribution as well as the discriminant power of the resulting synthetic set, lending itself to strong generalization capability to various architectures. At the heart of our approach is an effective strategy to align features from the real and synthetic data across various scales, while accounting for the classification of real samples. Our scheme is further backed up by a novel dynamic bi-level optimization, which adaptively adjusts parameter updates to prevent over-/under-fitting. We validate the proposed CAFE across various datasets, and demonstrate that it generally outperforms the state of the art: on the SVHN dataset, for example, the performance gain is up to 11\%. Extensive experiments and analyses verify the effectiveness and necessity of proposed designs.},
+	urldate = {2023-05-30},
+	publisher = {arXiv},
+	author = {Wang, Kai and Zhao, Bo and Peng, Xiangyu and Zhu, Zheng and Yang, Shuo and Wang, Shuo and Huang, Guan and Bilen, Hakan and Wang, Xinchao and You, Yang},
+	month = mar,
+	year = {2022},
+	note = {arXiv:2203.01531 [cs]},
+	keywords = {Computer Science - Computer Vision and Pattern Recognition},
+	annote = {Comment: The manuscript has been accepted by CVPR-2022!},
+	file = {arXiv.org Snapshot:/Users/inwon/Zotero/storage/8B3F4AE5/2203.html:text/html;Full Text PDF:/Users/inwon/Zotero/storage/M3ZE32SE/Wang et al. - 2022 - CAFE Learning to Condense Dataset by Aligning Fea.pdf:application/pdf},
+}
+
+
+@article{OpenML2013,
+author = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},
+title = {OpenML: Networked Science in Machine Learning},
+journal = {SIGKDD Explorations},
+volume = {15},
+number = {2},
+year = {2013},
+pages = {49--60},
+url = {http://doi.acm.org/10.1145/2641190.2641198},
+doi = {10.1145/2641190.2641198},
+publisher = {ACM},
+address = {New York, NY, USA},
+}
+
+@article{scikit-learn,
+ title={Scikit-learn: Machine Learning in {P}ython},
+ author={Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
+         and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
+         and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
+         Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+ journal={Journal of Machine Learning Research},
+ volume={12},
+ pages={2825--2830},
+ year={2011}
+}
+
+@inproceedings{bergstraMakingScienceModel2013,
+  title = {Making a {{Science}} of {{Model Search}}: {{Hyperparameter Optimization}} in {{Hundreds}} of {{Dimensions}} for {{Vision Architectures}}},
+  shorttitle = {Making a {{Science}} of {{Model Search}}},
+  booktitle = {Proceedings of the 30th {{International Conference}} on {{Machine Learning}}},
+  author = {Bergstra, James and Yamins, Daniel and Cox, David},
+  year = {2013},
+  month = feb,
+  pages = {115--123},
+  publisher = {{PMLR}},
+  issn = {1938-7228},
+  urldate = {2023-12-17},
+  abstract = {Many computer vision algorithms depend on configuration settings that are typically hand-tuned in the course of evaluating the algorithm for a particular data set. While such parameter tuning is often presented as being incidental to the algorithm, correctly setting these parameter choices is frequently critical to realizing a method's full potential. Compounding matters, these parameters often must be re-tuned when the algorithm is applied to a new problem domain, and the tuning process itself often depends on personal experience and intuition in ways that are hard to quantify or describe. Since the performance of a given technique depends on both the fundamental quality of the algorithm and the details of its tuning, it is sometimes difficult to know whether a given technique is genuinely better, or simply better tuned.     In this work, we propose a meta-modeling approach to support automated hyperparameter optimization, with the goal of providing practical tools that replace hand-tuning with a reproducible and unbiased optimization process. Our approach is to expose the underlying expression graph of how a performance metric (e.g. classification accuracy on validation examples) is computed from hyperparameters that govern not only how individual processing steps are applied, but even which processing steps are included.  A hyperparameter optimization algorithm transforms this graph into a program for optimizing that performance metric.  Our approach yields state of the art results on three disparate computer vision problems: a face-matching verification task (LFW), a face identification task (PubFig83) and an object recognition task (CIFAR-10), using a single broad class of feed-forward vision architectures.},
+  langid = {english},
+  file = {/Users/inwon/Zotero/storage/IFBHTPNB/Bergstra et al. - 2013 - Making a Science of Model Search Hyperparameter O.pdf}
+}
+
+@article{liaw2018tune,
+    title={Tune: A Research Platform for Distributed Model Selection and Training},
+    author={Liaw, Richard and Liang, Eric and Nishihara, Robert
+            and Moritz, Philipp and Gonzalez, Joseph E and Stoica, Ion},
+    journal={arXiv preprint arXiv:1807.05118},
+    year={2018}
+}
+
+@inproceedings{hamiltonInductiveRepresentationLearning2017,
+  title = {Inductive {{Representation Learning}} on {{Large Graphs}}},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Hamilton, Will and Ying, Zhitao and Leskovec, Jure},
+  year = {2017},
+  volume = {30},
+  publisher = {{Curran Associates, Inc.}},
+  urldate = {2023-12-18},
+  abstract = {Low-dimensional embeddings of nodes in large graphs have proved extremely useful in a variety of prediction tasks, from content recommendation to identifying protein functions. However, most existing approaches require that all nodes in the graph are present during training of the embeddings; these previous approaches are inherently transductive and do not naturally generalize to unseen nodes. Here we present GraphSAGE, a general, inductive framework that leverages node feature information (e.g., text attributes) to efficiently generate node embeddings.  Instead of training individual embeddings for each node, we learn a function that generates embeddings by sampling and aggregating features from a node's local neighborhood. Our algorithm outperforms strong baselines on three inductive node-classification benchmarks: we classify the category of unseen nodes in evolving information graphs based on citation and Reddit post data, and we show that our algorithm generalizes to completely unseen graphs using a multi-graph dataset of protein-protein interactions.},
+}
+
+@inproceedings{velickovicGraphAttentionNetworks2018,
+  title = {Graph {{Attention Networks}}},
+  booktitle = {International {{Conference}} on {{Learning Representations}}},
+  author = {Veli{\v c}kovi{\'c}, Petar and Cucurull, Guillem and Casanova, Arantxa and Romero, Adriana and Li{\`o}, Pietro and Bengio, Yoshua},
+  year = {2018},
+  month = feb,
+  urldate = {2023-12-18},
+  abstract = {We present graph attention networks (GATs), novel neural network architectures that operate on graph-structured data, leveraging masked self-attentional layers to address the shortcomings of prior methods based on graph convolutions or their approximations. By stacking layers in which nodes are able to attend over their neighborhoods' features, we enable (implicitly) specifying different weights to different nodes in a neighborhood, without requiring any kind of computationally intensive matrix operation (such as inversion) or depending on knowing the graph structure upfront. In this way, we address several key challenges of spectral-based graph neural networks simultaneously, and make our model readily applicable to inductive as well as transductive problems. Our GAT models have achieved or matched state-of-the-art results across four established transductive and inductive graph benchmarks: the Cora, Citeseer and Pubmed citation network datasets, as well as a protein-protein interaction dataset (wherein test graphs remain unseen during training).},
+  langid = {english},
+  file = {/Users/inwon/Zotero/storage/TSAMJ6CQ/Veličković et al. - 2018 - Graph Attention Networks.pdf}
+}
+
+
+@inproceedings{kipfSemiSupervisedClassificationGraph2016,
+  title = {Semi-{{Supervised Classification}} with {{Graph Convolutional Networks}}},
+  booktitle = {International {{Conference}} on {{Learning Representations}}},
+  author = {Kipf, Thomas N. and Welling, Max},
+  year = {2016},
+  month = nov,
+  urldate = {2023-12-18},
+  abstract = {We present a scalable approach for semi-supervised learning on graph-structured data that is based on an efficient variant of convolutional neural networks which operate directly on graphs. We motivate the choice of our convolutional architecture via a localized first-order approximation of spectral graph convolutions. Our model scales linearly in the number of graph edges and learns hidden layer representations that encode both local graph structure and features of nodes. In a number of experiments on citation networks and on a knowledge graph dataset we demonstrate that our approach outperforms related methods by a significant margin.},
+  langid = {english},
+  file = {/Users/inwon/Zotero/storage/DC598KZ4/Kipf and Welling - 2016 - Semi-Supervised Classification with Graph Convolut.pdf}
+}
+
+@misc{jax2018github,
+  author = {James Bradbury and Roy Frostig and Peter Hawkins and Matthew James Johnson and Chris Leary and Dougal Maclaurin and George Necula and Adam Paszke and Jake Vander{P}las and Skye Wanderman-{M}ilne and Qiao Zhang},
+  title = {{JAX}: composable transformations of {P}ython+{N}um{P}y programs},
+  url = {http://github.com/google/jax},
+  version = {0.3.13},
+  year = {2018},
+}
+
+@inproceedings{jacotNeuralTangentKernel2018,
+  title = {Neural {{Tangent Kernel}}: {{Convergence}} and {{Generalization}} in {{Neural Networks}}},
+  shorttitle = {Neural {{Tangent Kernel}}},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Jacot, Arthur and Gabriel, Franck and Hongler, Clement},
+  year = {2018},
+  volume = {31},
+  publisher = {{Curran Associates, Inc.}},
+  urldate = {2023-12-19},
+  abstract = {At initialization, artificial neural networks (ANNs) are equivalent to Gaussian processes in the infinite-width limit, thus connecting them to kernel methods. We prove that the evolution of an ANN during training can also be described by a kernel: during gradient descent on the parameters of an ANN, the network function (which maps input vectors to output vectors) follows the so-called kernel gradient associated with a new object, which we call the Neural Tangent Kernel (NTK). This kernel is central to describe the generalization features of ANNs. While the NTK is random at initialization and varies during training, in the infinite-width limit it converges to an explicit limiting kernel and stays constant during training. This makes it possible to study the training of ANNs in function space instead of parameter space. Convergence of the training can then be related to the positive-definiteness of the limiting NTK.},
+}
+
+@misc{dataset_phishing_websites,
+  author       = {Mohammad,Rami and McCluskey,Lee},
+  title        = {{Phishing Websites}},
+  year         = {2015},
+  howpublished = {UCI Machine Learning Repository},
+  note         = {{DOI}: https://doi.org/10.24432/C51W2X}
+}
+
+@misc{dataset_tencent_ctr,
+    author = {Aden, Yi Wang},
+    title = {KDD Cup 2012, Track 2},
+    publisher = {Kaggle},
+    year = {2012},
+    url = {https://kaggle.com/competitions/kddcup2012-track2}
+}
+
+@misc{dataset_adult,
+  author       = {Becker,Barry and Kohavi,Ronny},
+  title        = {{Adult}},
+  year         = {1996},
+  howpublished = {UCI Machine Learning Repository},
+  note         = {{DOI}: https://doi.org/10.24432/C5XW20}
+}
+
+
+@misc{grinsztajn2022treebased,
+      title={Why do tree-based models still outperform deep learning on tabular data?}, 
+      author={Léo Grinsztajn and Edouard Oyallon and Gaël Varoquaux},
+      year={2022},
+      eprint={2207.08815},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+@article{shwartz-zivTabularDataDeep2022,
+  title = {Tabular Data: {{Deep}} Learning Is Not All You Need},
+  shorttitle = {Tabular Data},
+  author = {{Shwartz-Ziv}, Ravid and Armon, Amitai},
+  year = {2022},
+  month = may,
+  journal = {Information Fusion},
+  volume = {81},
+  pages = {84--90},
+  issn = {1566-2535},
+  doi = {10.1016/j.inffus.2021.11.011},
+  urldate = {2024-01-05},
+  abstract = {A key element in solving real-life data science problems is selecting the types of models to use. Tree ensemble models (such as XGBoost) are usually recommended for classification and regression problems with tabular data. However, several deep learning models for tabular data have recently been proposed, claiming to outperform XGBoost for some use cases. This paper explores whether these deep models should be a recommended option for tabular data by rigorously comparing the new deep models to XGBoost on various datasets. In addition to systematically comparing their performance, we consider the tuning and computation they require. Our study shows that XGBoost outperforms these deep models across the datasets, including the datasets used in the papers that proposed the deep models. We also demonstrate that XGBoost requires much less tuning. On the positive side, we show that an ensemble of deep models and XGBoost performs better on these datasets than XGBoost alone.},
+  keywords = {Deep neural networks,Hyperparameter optimization,Tabular data,Tree-based models},
+}
+
+@misc{guoDeepFMFactorizationMachineBased2017,
+  title = {{{DeepFM}}: {{A Factorization-Machine}} Based {{Neural Network}} for {{CTR Prediction}}},
+  shorttitle = {{{DeepFM}}},
+  author = {Guo, Huifeng and Tang, Ruiming and Ye, Yunming and Li, Zhenguo and He, Xiuqiang},
+  year = {2017},
+  month = mar,
+  number = {arXiv:1703.04247},
+  eprint = {1703.04247},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.1703.04247},
+  urldate = {2023-06-05},
+  abstract = {Learning sophisticated feature interactions behind user behaviors is critical in maximizing CTR for recommender systems. Despite great progress, existing methods seem to have a strong bias towards low- or high-order interactions, or require expertise feature engineering. In this paper, we show that it is possible to derive an end-to-end learning model that emphasizes both low- and high-order feature interactions. The proposed model, DeepFM, combines the power of factorization machines for recommendation and deep learning for feature learning in a new neural network architecture. Compared to the latest Wide {\textbackslash}\& Deep model from Google, DeepFM has a shared input to its "wide" and "deep" parts, with no need of feature engineering besides raw features. Comprehensive experiments are conducted to demonstrate the effectiveness and efficiency of DeepFM over the existing models for CTR prediction, on both benchmark data and commercial data.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computation and Language,Computer Science - Information Retrieval},
+  file = {/Users/inwon/Zotero/storage/LEPJBMHT/Guo et al. - 2017 - DeepFM A Factorization-Machine based Neural Netwo.pdf;/Users/inwon/Zotero/storage/L68ZDFBH/1703.html}
+}
+
+@inproceedings{chenXGBoostScalableTree2016a,
+  title = {{{XGBoost}}: {{A Scalable Tree Boosting System}}},
+  shorttitle = {{{XGBoost}}},
+  booktitle = {Proceedings of the 22nd {{ACM SIGKDD International Conference}} on {{Knowledge Discovery}} and {{Data Mining}}},
+  author = {Chen, Tianqi and Guestrin, Carlos},
+  year = {2016},
+  month = aug,
+  series = {{{KDD}} '16},
+  pages = {785--794},
+  publisher = {{Association for Computing Machinery}},
+  address = {{New York, NY, USA}},
+  doi = {10.1145/2939672.2939785},
+  urldate = {2024-01-15},
+  abstract = {Tree boosting is a highly effective and widely used machine learning method. In this paper, we describe a scalable end-to-end tree boosting system called XGBoost, which is used widely by data scientists to achieve state-of-the-art results on many machine learning challenges. We propose a novel sparsity-aware algorithm for sparse data and weighted quantile sketch for approximate tree learning. More importantly, we provide insights on cache access patterns, data compression and sharding to build a scalable tree boosting system. By combining these insights, XGBoost scales beyond billions of examples using far fewer resources than existing systems.},
+  isbn = {978-1-4503-4232-2},
+  keywords = {large-scale machine learning},
+  file = {/Users/inwon/Zotero/storage/MHRK3MEX/Chen and Guestrin - 2016 - XGBoost A Scalable Tree Boosting System.pdf}
+}
+
+
+@inproceedings{gorishniyRevisitingDeepLearning2021,
+  title = {Revisiting {{Deep Learning Models}} for {{Tabular Data}}},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Gorishniy, Yury and Rubachev, Ivan and Khrulkov, Valentin and Babenko, Artem},
+  year = {2021},
+  volume = {34},
+  pages = {18932--18943},
+  publisher = {{Curran Associates, Inc.}},
+  urldate = {2024-01-15},
+  abstract = {The existing literature on deep learning for tabular data proposes a wide range of novel architectures and reports competitive results on various datasets. However, the proposed models are usually not properly compared to each other and existing works often use different benchmarks and experiment protocols. As a result, it is unclear for both researchers and practitioners what models perform best. Additionally, the field still lacks effective baselines, that is, the easy-to-use models that provide competitive performance across different problems.In this work, we perform an overview of the main families of DL architectures for tabular data and raise the bar of baselines in tabular DL by identifying two simple and powerful deep architectures. The first one is a ResNet-like architecture which turns out to be a strong baseline that is often missing in prior works. The second model is our simple adaptation of the Transformer architecture for tabular data, which outperforms other solutions on most tasks. Both models are compared to many existing architectures on a diverse set of tasks under the same training and tuning protocols. We also compare the best DL models with Gradient Boosted Decision Trees and conclude that there is still no universally superior solution. The source code is available at https://github.com/yandex-research/rtdl.},
+  file = {/Users/inwon/Zotero/storage/VPWN6ZBI/Gorishniy et al. - 2021 - Revisiting Deep Learning Models for Tabular Data.pdf}
+}
+
+@article{assentClusteringHighDimensional2012,
+  title = {Clustering High Dimensional Data},
+  author = {Assent, Ira},
+  year = {2012},
+  journal = {WIREs Data Mining and Knowledge Discovery},
+  volume = {2},
+  number = {4},
+  pages = {340--350},
+  issn = {1942-4795},
+  doi = {10.1002/widm.1062},
+  urldate = {2024-01-15},
+  abstract = {High-dimensional data, i.e., data described by a large number of attributes, pose specific challenges to clustering. The so-called `curse of dimensionality', coined originally to describe the general increase in complexity of various computational problems as dimensionality increases, is known to render traditional clustering algorithms ineffective. The curse of dimensionality, among other effects, means that with increasing number of dimensions, a loss of meaningful differentiation between similar and dissimilar objects is observed. As high-dimensional objects appear almost alike, new approaches for clustering are required. Consequently, recent research has focused on developing techniques and clustering algorithms specifically for high-dimensional data. Still, open research issues remain. Clustering is a data mining task devoted to the automatic grouping of data based on mutual similarity. Each cluster groups objects that are similar to one another, whereas dissimilar objects are assigned to different clusters, possibly separating out noise. In this manner, clusters describe the data structure in an unsupervised manner, i.e., without the need for class labels. A number of clustering paradigms exist that provide different cluster models and different algorithmic approaches for cluster detection. Common to all approaches is the fact that they require some underlying assessment of similarity between data objects. In this article, we provide an overview of the effects of high-dimensional spaces, and their implications for different clustering paradigms. We review models and algorithms that address clustering in high dimensions, with pointers to the literature, and sketch open research issues. We conclude with a summary of the state of the art. {\textcopyright} 2012 Wiley Periodicals, Inc. This article is categorized under: Technologies {$>$} Structure Discovery and Clustering},
+  copyright = {Copyright {\textcopyright} 2012 John Wiley \& Sons, Inc.},
+  langid = {english},
+  file = {/Users/inwon/Zotero/storage/DEKXJBGR/Assent - 2012 - Clustering high dimensional data.pdf}
+}
+
+
+@incollection{steinbachChallengesClusteringHigh2004,
+  title = {The {{Challenges}} of {{Clustering High Dimensional Data}}},
+  booktitle = {New {{Directions}} in {{Statistical Physics}}: {{Econophysics}}, {{Bioinformatics}}, and {{Pattern Recognition}}},
+  author = {Steinbach, Michael and Ert{\"o}z, Levent and Kumar, Vipin},
+  editor = {Wille, Luc T.},
+  year = {2004},
+  pages = {273--309},
+  publisher = {{Springer}},
+  address = {{Berlin, Heidelberg}},
+  doi = {10.1007/978-3-662-08968-2_16},
+  urldate = {2024-01-15},
+  abstract = {Cluster analysis divides data into groups (clusters) for the purposes of summarization or improved understanding. For example, cluster analysis has been used to group related documents for browsing, to find genes and proteins that have similar functionality, or as a means of data compression. While clustering has a long history and a large number of clustering techniques have been developed in statistics, pattern recognition, data mining, and other fields, significant challenges still remain. In this chapter we provide a short introduction to cluster analysis, and then focus on the challenge of clustering high dimensional data. We present a brief overview of several recent techniques, including a more detailed description of recent work of our own which uses a concept-based clustering approach.},
+  isbn = {978-3-662-08968-2},
+  langid = {english},
+  keywords = {Concept Space,Document Cluster,Frequent Itemset,Grid Cell,High Dimensional Data},
+  file = {/Users/inwon/Zotero/storage/4SEEZ5TQ/Steinbach et al. - 2004 - The Challenges of Clustering High Dimensional Data.pdf}
+}
+
+@article{gorishniyEmbeddingsNumericalFeatures2022,
+  title = {On {{Embeddings}} for {{Numerical Features}} in {{Tabular Deep Learning}}},
+  author = {Gorishniy, Yury and Rubachev, Ivan and Babenko, Artem},
+  year = {2022},
+  month = dec,
+  journal = {Advances in Neural Information Processing Systems},
+  volume = {35},
+  pages = {24991--25004},
+  urldate = {2024-01-15},
+  langid = {english},
+  file = {/Users/inwon/Zotero/storage/6LMXJINI/Gorishniy et al. - 2022 - On Embeddings for Numerical Features in Tabular De.pdf}
+}
+
+@misc{huangTabTransformerTabularData2020,
+  title = {{{TabTransformer}}: {{Tabular Data Modeling Using Contextual Embeddings}}},
+  shorttitle = {{{TabTransformer}}},
+  author = {Huang, Xin and Khetan, Ashish and Cvitkovic, Milan and Karnin, Zohar},
+  year = {2020},
+  month = dec,
+  number = {arXiv:2012.06678},
+  eprint = {2012.06678},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.2012.06678},
+  urldate = {2024-01-15},
+  abstract = {We propose TabTransformer, a novel deep tabular data modeling architecture for supervised and semi-supervised learning. The TabTransformer is built upon self-attention based Transformers. The Transformer layers transform the embeddings of categorical features into robust contextual embeddings to achieve higher prediction accuracy. Through extensive experiments on fifteen publicly available datasets, we show that the TabTransformer outperforms the state-of-the-art deep learning methods for tabular data by at least 1.0\% on mean AUC, and matches the performance of tree-based ensemble models. Furthermore, we demonstrate that the contextual embeddings learned from TabTransformer are highly robust against both missing and noisy data features, and provide better interpretability. Lastly, for the semi-supervised setting we develop an unsupervised pre-training procedure to learn data-driven contextual embeddings, resulting in an average 2.1\% AUC lift over the state-of-the-art methods.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  file = {/Users/inwon/Zotero/storage/RFR6L6Q3/Huang et al. - 2020 - TabTransformer Tabular Data Modeling Using Contex.pdf}
+}
+
+@article{wangTransTabLearningTransferable2022,
+  title = {{{TransTab}}: {{Learning Transferable Tabular Transformers Across Tables}}},
+  shorttitle = {{{TransTab}}},
+  author = {Wang, Zifeng and Sun, Jimeng},
+  year = {2022},
+  month = dec,
+  journal = {Advances in Neural Information Processing Systems},
+  volume = {35},
+  pages = {2902--2915},
+  urldate = {2024-01-15},
+  langid = {english},
+  file = {/Users/inwon/Zotero/storage/HCKWUNXE/Wang and Sun - 2022 - TransTab Learning Transferable Tabular Transforme.pdf}
+}
+
+@inproceedings{chengWideDeepLearning2016,
+  title = {Wide \& {{Deep Learning}} for {{Recommender Systems}}},
+  booktitle = {Proceedings of the 1st {{Workshop}} on {{Deep Learning}} for {{Recommender Systems}}},
+  author = {Cheng, Heng-Tze and Koc, Levent and Harmsen, Jeremiah and Shaked, Tal and Chandra, Tushar and Aradhye, Hrishi and Anderson, Glen and Corrado, Greg and Chai, Wei and Ispir, Mustafa and Anil, Rohan and Haque, Zakaria and Hong, Lichan and Jain, Vihan and Liu, Xiaobing and Shah, Hemal},
+  year = {2016},
+  month = sep,
+  series = {{{DLRS}} 2016},
+  pages = {7--10},
+  publisher = {{Association for Computing Machinery}},
+  address = {{New York, NY, USA}},
+  doi = {10.1145/2988450.2988454},
+  urldate = {2024-01-16},
+  abstract = {Generalized linear models with nonlinear feature transformations are widely used for large-scale regression and classification problems with sparse inputs. Memorization of feature interactions through a wide set of cross-product feature transformations are effective and interpretable, while generalization requires more feature engineering effort. With less feature engineering, deep neural networks can generalize better to unseen feature combinations through low-dimensional dense embeddings learned for the sparse features. However, deep neural networks with embeddings can over-generalize and recommend less relevant items when the user-item interactions are sparse and high-rank. In this paper, we present Wide \& Deep learning---jointly trained wide linear models and deep neural networks---to combine the benefits of memorization and generalization for recommender systems. We productionized and evaluated the system on Google Play, a commercial mobile app store with over one billion active users and over one million apps. Online experiment results show that Wide \& Deep significantly increased app acquisitions compared with wide-only and deep-only models. We have also open-sourced our implementation in TensorFlow.},
+  isbn = {978-1-4503-4795-2},
+  keywords = {Recommender Systems,Wide \& Deep Learning},
+  file = {/Users/inwon/Zotero/storage/ZDFWUGMC/Cheng et al. - 2016 - Wide & Deep Learning for Recommender Systems.pdf}
+}
+
+@incollection{NEURIPS2019_9015,
+title = {PyTorch: An Imperative Style, High-Performance Deep Learning Library},
+author = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
+booktitle = {Advances in Neural Information Processing Systems 32},
+pages = {8024--8035},
+year = {2019},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.neurips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library.pdf}
+}
